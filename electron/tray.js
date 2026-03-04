@@ -5,7 +5,7 @@ const store = require("./store");
 let tray = null;
 
 function createTray(createOverlay, restartScheduler) {
-  tray = new Tray(path.join(__dirname, "timer.png"));
+  tray = new Tray(path.join(__dirname, "../build/icon.ico"));
 
   const contextMenu = Menu.buildFromTemplate([
     {

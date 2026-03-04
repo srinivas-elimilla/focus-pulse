@@ -16,7 +16,7 @@ export default function App() {
 
   // Fade-in after 3 seconds
   useEffect(() => {
-    const audio = new Audio("/sound.mp3");
+    const audio = new Audio("./sound.mp3");
     audio.volume = 0.5;
     const t = setTimeout(() => {
       (setVisible(true), audio.play());

@@ -1,18 +1,26 @@
 {
   "name": "focus-pulse",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "electron/main.js",
   "build": {
+    "copyright": "Copyright © 2026 Srinivas Elimilla",
     "appId": "com.srinivas.focuspulse",
     "productName": "FocusPulse",
+    "directories": {
+      "buildResources": "build"
+    },
     "win": {
-      "target": "nsis"
+      "target": "nsis",
+      "icon": "build/icon.ico"
     },
     "nsis": {
       "oneClick": false,
       "perMachine": false,
       "allowElevation": true,
-      "allowToChangeInstallationDirectory": true
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "FocusPulse"
     }
   },
   "scripts": {
@@ -23,9 +31,7 @@
     "start": "electron ."
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "concurrently": "^9.2.1",
     "electron": "^40.6.0",
@@ -37,5 +43,7 @@
   },
   "dependencies": {
     "electron-store": "^8.2.0"
-  }
+  },
+  "description": "Minimal desktop productivity reminder with smart hourly nudges.",
+  "author": "Srinivas Elimilla"
 }

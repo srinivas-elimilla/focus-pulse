@@ -52,10 +52,13 @@ function createOverlay() {
 
   win.setAlwaysOnTop(true, "screen-saver");
 
-  // IMPORTANT: Remove ignoreMouseEvents so the X button is clickable
-  // win.setIgnoreMouseEvents(true);  // ❌ don't use this now
+  const isDev = !app.isPackaged;
 
-  win.loadURL("http://localhost:5173");
+  if (isDev) {
+    win.loadURL("http://localhost:5173");
+  } else {
+    win.loadFile(path.join(__dirname, "../renderer/dist/index.html"));
+  }
 
   // Optional: if you still want auto-close as a backup (renderer will animate then close)
   const duration = store.get("animationDuration");
