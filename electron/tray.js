@@ -9,6 +9,10 @@ function createTray(createOverlay, restartScheduler) {
 
   const contextMenu = Menu.buildFromTemplate([
     {
+      label: "5 Minutes",
+      click: () => updateInterval(300000),
+    },
+    {
       label: "15 Minutes",
       click: () => updateInterval(900000),
     },
@@ -19,6 +23,10 @@ function createTray(createOverlay, restartScheduler) {
     {
       label: "1 Hour",
       click: () => updateInterval(3600000),
+    },
+    {
+      label: "2 Hour",
+      click: () => updateInterval(7200000),
     },
     { type: "separator" },
     {

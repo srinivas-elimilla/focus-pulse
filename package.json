@@ -1,6 +1,6 @@
 {
   "name": "focus-pulse",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "electron/main.js",
   "build": {
     "copyright": "Copyright © 2026 Srinivas Elimilla",
@@ -9,6 +9,11 @@
     "directories": {
       "buildResources": "build"
     },
+    "files": [
+      "electron/**/*",
+      "renderer/dist/**/*",
+      "package.json"
+    ],
     "win": {
       "target": "nsis"
     },
